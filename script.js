@@ -6,7 +6,7 @@ function pixelsToHimetric(pixels) {
 const himetricInput = document.querySelector("input[name=himetric");
 const pixelInput = document.querySelector("input[name=pixel]");
 
-pixelInput.addEventListener("change", event => {
+pixelInput.addEventListener("input", () => {
     const pixels = pixelInput.value;
     himetricInput.value = pixelsToHimetric(pixels);
 });
