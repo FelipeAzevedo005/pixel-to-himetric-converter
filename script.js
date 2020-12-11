@@ -1,14 +1,12 @@
 function pixelsToHimetric(pixels) {
     
-    return pixels * 26.4;
+    return pixels * 26.45833;
 }
 
-const form = document.querySelector("form");
-form.addEventListener("submit", event => {
-    event.preventDefault();
+const himetricInput = document.querySelector("input[name=himetric");
+const pixelInput = document.querySelector("input[name=pixel]");
 
-    const input = document.querySelector("input");
-    const pixels = input.value;
-
-    console.log(pixelsToHimetric(pixels));
+pixelInput.addEventListener("change", event => {
+    const pixels = pixelInput.value;
+    himetricInput.value = pixelsToHimetric(pixels);
 });
