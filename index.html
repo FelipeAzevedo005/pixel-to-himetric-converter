@@ -3,17 +3,29 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
         <title>Pixel to Himetric Calculator</title>
     </head>
 
     <body>
-        <div class="converter">
-            <label for="pixel">Pixel</label>
-            <input type="number" name="pixel" id="pixel">
-            <label for="himetric">Himetric</label>
-            <input type="number" name="himetric" id="himetric" readonly="true">
-            
-        </div>
+        <main class="converter">
+            <div class="input-container">
+                <label for="pixel">Pixel</label>
+                <input type="number" name="pixel" id="pixel" value=1>
+            </div>
+
+            <div class="middle">
+                <button>Change</button>
+            </div>
+
+            <div class="output-container">
+                <label for="himetric">Himetric</label>
+                <input type="number" name="himetric" id="himetric" readonly="true">
+            </div>
+        
+        </main>
         
         <script src="./script.js"></script>
     </body>
