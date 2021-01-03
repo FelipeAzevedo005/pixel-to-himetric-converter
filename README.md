@@ -21,7 +21,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com)
 $ git clone https://github.com/FelipeAzevedo005/pixel-to-himetric-converter.git pixel-to-himetric-converter
 ```
 
-After that, enter in the calculator folder and right click on index.html, then choose to open with your preferred browser.
+After that, enter in the pixel-to-himetric-converter folder and right click on index.html, then choose to open with your preferred browser.
+
+## :memo: License
+This project is under the MIT license. See the [LICENSE](https://github.com/FelipeAzevedo005/pixel-to-himetric-converter/blob/main/LICENSE) for more information.
 
 ---
 
