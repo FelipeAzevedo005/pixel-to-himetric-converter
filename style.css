@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #FFF;
+}
+
+.converter {
+    display: flex;
+    justify-content: center;
+
+    width: 504px;
+    height: 64px;
+
+    border-radius: 5px;
+    
+    background-color: #FFF;
+}
+
+.converter .input-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 5px;
+
+    width: 43.5%;
+    height: 100%;
+}
+
+.converter .output-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 5px;
+
+    width: 43.5%;
+    height: 100%;
+}
+
+.converter label {
+    margin-bottom: 5px;
+    height: 20px;
+    
+    font-family: 'Roboto';
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.converter button {
+    position: relative;
+    
+    border: none;
+    border-radius: 5px;
+    
+    width: 100%;
+    height: 54px;
+
+    background-color: dodgerblue;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.converter button:active {
+    background-color: #0f80ef;
+}
+
+.converter button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    color: #FFF;
+}
+
+.converter input {
+    border: none;
+    border-bottom: 2px solid #555;
+    
+    color: #333;
+    font-family: 'Roboto';
+    font-size: 26px;
+    text-align: center;
+    
+    background: transparent;
+
+    overflow: hidden;
+    outline: none;
+}
+
+.converter .input-container input:focus {
+    border-bottom: 2px solid dodgerblue;
+}
+
+.material-icons {
+    color: white;
+    font-size: 32px;
+}
+
+/* Remove arrows in inputs type = number (Chrome, Safari, Edge, Opera) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in inputs type = number (Firefox) */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media(max-width: 768px) {
+    .converter {
+        align-items: center;
+        flex-direction: column;
+
+        width: 300px;
+        height: 300px;
+    }
+
+    .converter .input-container,
+    .converter .output-container {
+        width: 100%;
+        height: 40%;
+
+    }
+
+    .converter .input-container {
+        margin: 0;
+    }
+
+    .converter .output-container {
+        margin: 0;
+        padding-top: 60px; 
+    } 
+
+    .converter button {
+        width: 55px;
+    }
+}

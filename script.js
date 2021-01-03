@@ -12,14 +12,14 @@ function himetricToPixel(himetrics) {
 
 function convertUnit(unit, value) {
     switch(unit) {
-        case "Pixel":
+        case "Pixels":
             return pixelsToHimetric(value);
-            case "Himetric":
+            case "Himetrics":
             return himetricToPixel(value);
         }
     }
     
-function changeUnites() {
+function swapUnits() {
     var label = document.querySelector(".input-container label");
     
     var label2 = document.querySelector(".output-container label");
@@ -38,7 +38,7 @@ function changeUnites() {
 function buttonListener() {
     const button = document.querySelector("button");
     
-    button.addEventListener("click", changeUnites);
+    button.addEventListener("click", swapUnits);
 }
 
 function inputListener() {
@@ -48,7 +48,8 @@ function inputListener() {
         const output = document.querySelector(".output-container input");
         
         if (value !== "") {
-            output.value = convertUnit(label, value);
+            
+            output.value = convertUnit(label, value).toFixed(5);
         } else output.value = "";
     });
 }
