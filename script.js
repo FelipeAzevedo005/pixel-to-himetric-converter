@@ -1,4 +1,4 @@
-var input = document.querySelector(".input-container input");
+var input = document.querySelector('.input-container input');
 
 function pixelsToHimetric(pixels) {
     
@@ -12,18 +12,18 @@ function himetricToPixel(himetrics) {
 
 function convertUnit(unit, value) {
     switch(unit) {
-        case "Pixels":
+        case 'Pixels':
             return pixelsToHimetric(value);
-            case "Himetrics":
+            case 'Himetrics':
             return himetricToPixel(value);
         }
     }
     
 function swapUnits() {
-    var label = document.querySelector(".input-container label");
+    var label = document.querySelector('.input-container label');
     
-    var label2 = document.querySelector(".output-container label");
-    var input2 = document.querySelector(".output-container input");
+    var label2 = document.querySelector('.output-container label');
+    var input2 = document.querySelector('.output-container input');
     
     const newUnitLabel = label2.innerHTML;
     const newUnitInputValue = input2.value;
@@ -36,21 +36,21 @@ function swapUnits() {
 }
 
 function buttonListener() {
-    const button = document.querySelector("button");
+    const button = document.querySelector('button');
     
-    button.addEventListener("click", swapUnits);
+    button.addEventListener('click', swapUnits);
 }
 
 function inputListener() {
-    input.addEventListener("input", () => {
+    input.addEventListener('input', () => {
         const value = input.value;
-        const label = document.querySelector(".input-container label").innerHTML; 
-        const output = document.querySelector(".output-container input");
+        const label = document.querySelector('.input-container label').innerHTML; 
+        const output = document.querySelector('.output-container input');
         
-        if (value !== "") {
+        if (value !== '') {
             
             output.value = convertUnit(label, value).toFixed(5);
-        } else output.value = "";
+        } else output.value = '';
     });
 }
 
